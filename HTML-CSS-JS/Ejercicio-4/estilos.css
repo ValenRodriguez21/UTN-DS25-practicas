@@ -1,0 +1,35 @@
+/* Color de fondo general y fuente */
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Título principal */
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+/* Subtítulos */
+h2 {
+    color: #444;
+}
+
+/* Texto de los párrafos */
+p {
+    color: #222;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Enlaces */
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
