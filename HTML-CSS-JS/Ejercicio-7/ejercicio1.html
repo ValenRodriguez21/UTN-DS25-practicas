@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios - JS</title>
+</head>
+<body>
+    
+    <h3>1)Definir una variable numérica, asignarle un valor y sumarle 5</h3>
+    <button onclick="ejercicio1()">ejercicio1</button>
+
+    <h3>2)Definir dos variables de cadenas, asignarles valores y concatenarlas.</h3>
+    <button onclick="ejercicio2()">ejercicio2</button>
+    
+    <h3>3)Evaluar si dos números son iguales, diferentes, mayor o menor. Resolver utilizando “if”/”else”.</h3>
+    <button onclick="ejercicio3()">ejercicio3</button>
+
+    <h3>4)Utilizando “switch”. Definir una variable numérica. Asignarle un valor entre 1 y 10; mostrar a qué grupo pertenece:<br>
+            Grupo 1: del 1 al 3<br>
+            Grupo 2: del 4 al 6<br>
+            Grupo 3: del 7 al 10<br>
+        Modifiquemos el ejercicio para que el número lo ingrese el usuario (con “prompt”).</h3>
+    <button onclick="ejercicio4()">ejercicio4</button>
+
+    <h3>5)Realizar la sumatoria de 0 a 10 y devolver el valor de la misma.</h3>
+    <button onclick="ejercicio5()">ejercicio5</button>
+    
+    <h3>6)Generar un array con 10 números, recorrerlo e ir multiplicando todos los elementos, finalmente obtener el producto total.</h3>
+    <button onclick="ejercicio6()">ejercicio6</button>
+
+    <h3>7)Crear una función que reciba dos valores y retorne el producto de los mismos</h3>
+    <button onclick="ejercicio7()">ejercicio7</button>
+
+    <h3>8)Crear una función que reciba dos cadenas y retorne la concatenación de la misma.</h3>
+    <button onclick="ejercicio8()">ejercicio8</button>
+
+    <h3>9)Crear una función, a partir de la lógica aplicada en ejercicio 3, que reciba dos valores y muestre cuál es el mayor. 
+        En caso de ser iguales, deberá indicarlo</h3>
+    <button onclick="ejercicio3()">ejercicio9</button>
+
+    <h3>10)Crear una función que reciba un número y muestre tantos asteriscos como la cantidad de veces que se pasó como parámetro.</h3>
+    <button onclick="ejercicio10()">ejercicio10</button>
+
+    <h3>11)Crear una función que reciba el monto de un producto, y el medio de pago: C (tarjeta de crédito), E (efectivo) y D (tarjeta de débito).
+        Si el monto del producto es menor a $200 no se aplicará ningún descuento, pero si el monto a abonar es entre $200 y $400 se aplicará un descuento del 30% si el medio de pago es efectivo, 20% si se realiza con débito y 10% con tarjeta de crédito. 
+        Para montos mayores a $400, el descuento es el mismo sin importar el medio de pago, dicho descuento es del 40%. 
+        La función deberá retornar el monto final a abonar.
+    </h3>
+    <button onclick="ejercicio11()">ejercicio11</button>
+
+    <h3>12)Crear una función que reciba un número que represente la altura de un medio-árbol. Deberá generar de manera escalonada el mismo. Ejemplo: si la altura es 5 deberá mostrar:
+    *<br>
+    * *<br>
+    * * *<br>
+    * * * *<br>
+    * * * * *<br></h3>
+    <button onclick="ejercicio12()">ejercicio12</button>
+
+    <h3>13)Crear una función que reciba un número que indica el día de la semana y retorne una cadena de texto indicando a qué día corresponde. Ejemplo: si es 1, deberá retornar lunes, 2 retornará martes, y así siguiendo. Si el día es 6 o 7 deberá retornar “fin de semana”. En caso de un valor que no represente un día de la semana deberá retornar un mensaje de error</h3>
+    <button onclick="ejercicio13()">ejercicio13</button>
+
+    <h3>14)Crear una función que genere un array de varios elementos numéricos y muestre por pantalla el promedio de esos números. El tamaño y los valores deben ser ingresados por el usuario (comando prompt) en dicho orden. 
+    TIP: El dato ingresado con prompt es de tipo string, usar split() para quitar los espacios y usar la función Number para transformarlo.</h3>
+    <button onclick="ejercicio14()">ejercicio14</button>
+
+    <h3>15)Utilizar la función que genera el medio-árbol (ejercicio 12): crear un campo de entrada que le permita al usuario ingresar la altura del mismo. Incluir un botón que al presionarlo, invoque a la función generada previamente con el valor ingresado por el usuario para que la misma muestre el medio-árbol.
+    Deberá incluir validación de datos ingresados por el usuario.</h3>
+    <button onclick="ejercicio11()">ejercicio15</button>
+
+    <h3>16)Desarrollemos un portero eléctrico:
+    Tendrá dos visores, de dos posiciones el piso y una posición para dpto. Los pisos van del 00 al 48. Los dptos, del 1 al 6.
+    El botón llamar, muestra el mensaje de abajo. El botón borrar limpia los visores y el mensaje de abajo. 
+    Si se hace referencia a un piso y/o dpto que no existe, mostrar el error en el visor de abajo.</h3>
+
+    
+    
+    <h4>Portero Electrico</h4>
+
+    <label>Piso (00 a 48):</label>
+    <input type="numero" id="piso" min="0" max="48"><br>
+
+    <label>Dpto (1 a 6):</label>
+    <input type="numero" id="dpto" min="1" max="6"><br>
+
+    <button onclick="llamar()">Llamar</button>
+    <button onclick="borrar()">Borrar</button> 
+    
+    <p id="mensaje" style="font-weight: bold; margin-top: 20px;"></p>
+
+
+
+  <title>Teclado en pantalla</title>
+  <style>
+    #display {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .teclado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .fila {
+      display: flex;
+      gap: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Teclado en pantalla</h2>
+  <input type="text" id="display" readonly>
+
+  <div class="teclado" id="teclado"></div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
